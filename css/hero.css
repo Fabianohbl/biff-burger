@@ -1,0 +1,175 @@
+
+/* ==========================================
+   HERO — DESTAQUE PRINCIPAL
+========================================== */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+
+    width: 100%;
+    min-height: 32rem;
+    padding: 4rem 8%;
+
+    color: var(--color-text-light);
+    background-color: #000000;
+}
+
+/* CONTEÚDO TEXTUAL */
+
+.hero-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+
+    max-width: 35rem;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    padding: 0.5rem 1rem;
+
+    color: #ffffff;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-full);
+
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    color: #ffffff;
+}
+
+.hero-description {
+    max-width: 30rem;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #dddddd;
+}
+
+/* BOTÃO PRINCIPAL */
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 3rem;
+    padding: 0.75rem 1.5rem;
+
+    color: #ffffff;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-full);
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+
+    transition:
+        background-color var(--transition-base),
+        transform var(--transition-base);
+}
+
+.hero-button:hover {
+    background-color: #008f4c;
+    transform: translateY(-2px);
+}
+
+.hero-button:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* IMAGEM DO HAMBÚRGUER */
+
+.hero-image {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+.hero-image img {
+    display: block;
+
+    width: 100%;
+    max-width: 32rem;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* ==========================================
+   RESPONSIVIDADE — CELULARES
+========================================== */
+
+@media (max-width: 640px) {
+   
+/* ==========================================
+   RESPONSIVIDADE — CELULARES
+========================================== */
+
+@media (max-width: 640px) {
+
+    /* Hero em coluna no celular */
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        min-height: auto;
+        padding: 3rem 1.25rem;
+    }
+
+    /* Texto, título e descrição */
+    .hero-content {
+        align-items: center;
+        width: 100%;
+        max-width: 35rem;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.25rem, 10vw, 3.5rem);
+    }
+
+    .hero-description {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    /* Botão */
+    .hero-button {
+        align-self: center;
+    }
+
+    /* Imagem do hambúrguer */
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 22rem;
+        margin: 0 auto;
+    }
+}
+
+}

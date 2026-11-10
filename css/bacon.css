@@ -1,0 +1,248 @@
+
+/* ==========================================
+   BIFF BURGER — SEÇÃO BIFF BACON
+========================================== */
+
+
+/* ==========================================
+   1. SEÇÃO PRINCIPAL
+========================================== */
+
+.biff-bacon {
+    width: 100%;
+    padding: 3rem 5%;
+    box-sizing: border-box;
+
+    background-color: #F5E6CC;
+}
+
+
+/* ==========================================
+   2. TÍTULO DA SEÇÃO
+========================================== */
+
+.biff-bacon h2 {
+    margin-bottom: 2rem;
+
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    color: #D62300;
+    text-align: center;
+}
+
+
+/* ==========================================
+   3. GRADE DOS PRODUTOS — DESKTOP
+========================================== */
+
+.biff-bacon-products {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+
+    width: 100%;
+}
+
+
+/* Cada produto */
+
+.biff-bacon-card {
+    position: relative;
+    min-width: 0;
+}
+
+
+/* ==========================================
+   4. IMAGENS DOS HAMBÚRGUERES
+========================================== */
+
+.biff-bacon-image-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Link da imagem */
+
+.biff-bacon-image-link {
+    display: block;
+    width: 100%;
+}
+
+
+/* Imagem */
+
+.biff-bacon-image-link img {
+    display: block;
+
+    width: 100%;
+    height: 250px;
+
+    object-fit: contain;
+
+    transition: transform 300ms ease;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.biff-bacon-image-link:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ==========================================
+   5. NOME DOS HAMBÚRGUERES
+========================================== */
+
+.biff-bacon-name {
+    position: static;
+
+    display: block;
+    width: 100%;
+    min-height: 46px;
+
+    margin: 0;
+    padding: 0.75rem 0.5rem;
+
+    box-sizing: border-box;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.3;
+
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: break-word;
+
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* ==========================================
+   6. TABLETS
+========================================== */
+
+@media (min-width: 641px) and (max-width: 900px) {
+
+    .biff-bacon {
+        padding: 2.5rem 3%;
+    }
+
+    .biff-bacon-products {
+        gap: 1rem;
+    }
+
+    .biff-bacon-image-link img {
+        height: 200px;
+    }
+
+    .biff-bacon-name {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ==========================================
+   7. CELULARES — ATÉ 640px
+========================================== */
+
+@media (max-width: 640px) {
+
+    .biff-bacon {
+        padding: 2rem 16px;
+    }
+
+    /* Título menor */
+
+    .biff-bacon h2 {
+        margin-bottom: 1.5rem;
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    /* Produtos em sequência horizontal */
+
+    .biff-bacon-products {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 16px;
+
+        width: 100%;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        padding-bottom: 12px;
+
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: thin;
+        scrollbar-color: #502314 #E8D7B5;
+    }
+
+    /* Largura individual dos produtos */
+
+    .biff-bacon-card {
+        flex: 0 0 220px;
+        width: 220px;
+    }
+
+    /* Imagens proporcionais */
+
+    .biff-bacon-image-link img {
+        width: 100%;
+        height: 190px;
+    }
+
+    /* Nomes completos, sem cortes */
+
+    .biff-bacon-name {
+        min-height: 48px;
+        padding: 0.65rem 0.4rem;
+
+        font-size: 0.9rem;
+        line-height: 1.3;
+
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    /* Barra horizontal */
+
+    .biff-bacon-products::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .biff-bacon-products::-webkit-scrollbar-track {
+        background: #E8D7B5;
+        border-radius: 10px;
+    }
+
+    .biff-bacon-products::-webkit-scrollbar-thumb {
+        background: #502314;
+        border-radius: 10px;
+    }
+}
+
+
+/* ==========================================
+   8. ACESSIBILIDADE
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .biff-bacon-image-link img {
+        transition: none;
+    }
+
+    .biff-bacon-products {
+        scroll-behavior: auto;
+    }
+}

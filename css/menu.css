@@ -1,0 +1,232 @@
+
+/* =====================================
+   SEÇÃO NOSSO MENU
+===================================== */
+
+.nosso-menu {
+    width: 100%;
+    min-height: 600px;
+    padding: 30px 5% 50px;
+    box-sizing: border-box;
+
+    background: var(--color-secondary);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CABEÇALHO */
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.menu-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    color: #ffffff;
+    margin: 0 0 5px;
+}
+
+.menu-header p {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: #e8d2c7;
+    margin: 0;
+}
+
+/* FILTROS */
+
+.menu-filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 30px;
+}
+
+.menu-filtro {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 25px;
+
+    background: #805344;
+    color: #ffffff;
+
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.menu-filtro.active {
+    background: var(--color-accent);
+}
+
+/* GRADE DE PRODUTOS */
+
+.menu-produtos {
+    width: 100%;
+    max-width: 610px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* CARDS */
+
+.menu-card {
+    min-height: 165px;
+    padding: 20px 16px;
+    box-sizing: border-box;
+
+    background: var(--color-accent);
+    color: #ffffff;
+
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu-card h3 {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    color: #ffcc00;
+    margin: 0 0 10px;
+}
+
+.menu-card p {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    line-height: 1.4;
+    color: #ffffff;
+    margin: 0 0 12px;
+}
+
+.menu-card strong {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    color: #ffcc00;
+}
+
+/* CARDS COM IMAGEM */
+
+.menu-card-imagem {
+    background: #ffffff;
+    color: var(--color-secondary);
+}
+
+.menu-card-imagem img {
+    width: 125px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.menu-card-imagem h3 {
+    color: var(--color-secondary);
+    margin: 0;
+}
+
+/* =====================================
+   RESPONSIVIDADE — TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+    .nosso-menu {
+        padding: 30px 4% 40px;
+    }
+
+    .menu-produtos {
+        max-width: 580px;
+        gap: 14px;
+    }
+
+    .menu-card {
+        min-height: 155px;
+    }
+
+}
+
+/* =====================================
+   RESPONSIVIDADE — CELULAR
+===================================== */
+
+@media (max-width: 640px) {
+
+    .nosso-menu {
+        padding: 30px 16px 40px;
+    }
+
+    .menu-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .menu-filtros {
+        gap: 6px;
+        margin-bottom: 24px;
+    }
+
+    .menu-filtro {
+        padding: 8px 12px;
+        font-size: 0.65rem;
+    }
+
+    .menu-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .menu-card {
+        min-height: 155px;
+        padding: 16px 8px;
+    }
+
+    .menu-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .menu-card p {
+        font-size: 0.65rem;
+    }
+
+    .menu-card strong {
+        font-size: 1rem;
+    }
+
+    .menu-card-imagem img {
+        width: 105px;
+        height: 95px;
+    }
+
+}
+
+/* CELULARES ESTREITOS */
+
+@media (max-width: 360px) {
+
+    .menu-produtos {
+        gap: 8px;
+    }
+
+    .menu-card {
+        padding: 12px 6px;
+    }
+
+    .menu-filtro {
+        padding: 7px 9px;
+        font-size: 0.6rem;
+    }
+
+}
