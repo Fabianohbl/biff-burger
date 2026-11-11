@@ -1,0 +1,11 @@
+
+/* =========================================
+   SEÇÕES PRINCIPAIS — BIFF BURGER
+========================================= */
+
+.biff-secoes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
